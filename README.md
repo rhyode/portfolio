@@ -1,36 +1,188 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tanmay Tripathi - Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS, featuring a sleek dark theme and smooth animations.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Design**: Clean, minimal dark theme with custom color scheme
+- **Responsive**: Fully responsive design that works on all devices
+- **Interactive**: Smooth animations and hover effects
+- **Fast**: Built with Next.js for optimal performance
+- **TypeScript**: Type-safe code for better development experience
+- **Accessible**: Follows web accessibility best practices
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Heroicons
+- **Deployment**: Vercel (recommended)
+
+## 🎨 Design System
+
+### Color Palette
+- **Background**: `#111827` (Gray-Blue Dark)
+- **Surface**: `#1F2937` (Slightly Lighter Gray-Blue)
+- **Text**: `#F3F4F6` (Off-White)
+- **Accent**: `#38BDF8` (Sky Blue)
+
+### Typography
+- **Font Family**: Inter (Google Fonts)
+- **Font Weights**: 300, 400, 500, 600, 700
+
+## 🏗️ Project Structure
+
+```
+tanmay-portfolio/
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   └── components/
+│       ├── icons.tsx
+│       ├── MobileNav.tsx
+│       └── ScrollToTop.tsx
+├── public/
+├── docs/
+│   └── Resume_Tanmay_Tripathi.pdf
+├── tailwind.config.js
+├── tsconfig.json
+└── package.json
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd tanmay-portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Personal Information
+Update the personal information in `src/app/page.tsx`:
+- Name and title
+- Email address
+- LinkedIn profile URL
+- GitHub profile URL
+- Resume link
+- Skills and technologies
+- Work experience
+- Projects
+- Education details
 
-## Learn More
+### Colors
+Modify the color scheme in `tailwind.config.js`:
+```javascript
+colors: {
+  'dark-bg': '#111827',
+  'dark-surface': '#1F2937',
+  'dark-text': '#F3F4F6',
+  'dark-accent': '#38BDF8',
+  // Add your custom colors here
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Sections
+The portfolio includes the following sections:
+- **Hero**: Main introduction and call-to-action
+- **About**: Personal description and traits
+- **Skills**: Technical skills organized by category
+- **Experience**: Work experience and internships
+- **Projects**: Showcase of personal projects
+- **Education & Activities**: Academic background and extracurricular activities
+- **Contact**: Contact information and social links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Adding New Projects
+Add new projects to the projects array in `src/app/page.tsx`:
+```typescript
+{
+  title: "Your Project Title",
+  description: "Project description here",
+  technologies: ["Tech1", "Tech2", "Tech3"],
+  githubUrl: "https://github.com/...",
+  liveUrl: "https://your-demo.com",
+  period: "MM/YYYY - MM/YYYY"
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your GitHub repository to Vercel
+3. Deploy with one click
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Other Platforms
+The portfolio can be deployed on:
+- Netlify
+- GitHub Pages
+- AWS Amplify
+- Any static hosting provider
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📱 Mobile Responsiveness
+
+The portfolio is fully responsive with:
+- Mobile-first design approach
+- Responsive navigation with hamburger menu
+- Optimized typography for all screen sizes
+- Touch-friendly interactions
+
+## ♿ Accessibility Features
+
+- Semantic HTML structure
+- ARIA labels for interactive elements
+- Keyboard navigation support
+- High contrast color scheme
+- Focus indicators
+- Screen reader friendly
+
+## 🔧 Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Feel free to fork this project and customize it for your own portfolio. If you have suggestions for improvements, please open an issue or submit a pull request.
+
+## 📧 Contact
+
+- **Email**: tanmaytrip59@gmail.com
+- **LinkedIn**: [Your LinkedIn Profile]
+- **GitHub**: [Your GitHub Profile]
+
+---
+
+Built with ❤️ by Tanmay Tripathi
