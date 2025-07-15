@@ -9,44 +9,44 @@ module.exports = {
     extend: {
       colors: {
         // Custom dark theme colors
-        "dark-bg": "#111827",
-        "dark-surface": "#1F2937",
-        "dark-text": "#F3F4F6",
-        "dark-accent": "#38BDF8",
+        "dark-bg": "#1A202C",
+        "dark-surface": "#2D3748",
+        "dark-text": "#F7FAFC",
+        "dark-accent": "#48BB78",
 
         // Direct color definitions
         background: {
-          DEFAULT: "#111827",
-          secondary: "#1F2937",
+          DEFAULT: "#1A202C",
+          secondary: "#2D3748",
         },
         surface: {
-          DEFAULT: "#1F2937",
-          dark: "#111827",
+          DEFAULT: "#2D3748",
+          dark: "#1A202C",
         },
         text: {
-          DEFAULT: "#F3F4F6",
+          DEFAULT: "#F7FAFC",
           secondary: "#9CA3AF",
           muted: "#6B7280",
         },
         accent: {
-          DEFAULT: "#38BDF8",
-          hover: "#0EA5E9",
-          light: "#7DD3FC",
+          DEFAULT: "#48BB78",
+          hover: "#38A169",
+          light: "#68D391",
         },
       },
       backgroundColor: {
-        "dark-bg": "#111827",
-        "dark-surface": "#1F2937",
-        "dark-accent": "#38BDF8",
+        "dark-bg": "#1A202C",
+        "dark-surface": "#2D3748",
+        "dark-accent": "#48BB78",
       },
       textColor: {
-        "dark-text": "#F3F4F6",
-        "dark-accent": "#38BDF8",
-        "accent-hover": "#0EA5E9",
+        "dark-text": "#F7FAFC",
+        "dark-accent": "#48BB78",
+        "accent-hover": "#38A169",
       },
       borderColor: {
-        "dark-surface": "#1F2937",
-        "dark-accent": "#38BDF8",
+        "dark-surface": "#2D3748",
+        "dark-accent": "#48BB78",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
@@ -68,16 +68,16 @@ module.exports = {
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
         glow: {
-          "0%": { boxShadow: "0 0 5px #38BDF8" },
-          "100%": { boxShadow: "0 0 20px #38BDF8, 0 0 30px #38BDF8" },
+          "0%": { boxShadow: "0 0 5px #48BB78" },
+          "100%": { boxShadow: "0 0 20px #48BB78, 0 0 30px #48BB78" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 5px rgba(56, 189, 248, 0.5)" },
-          "50%": { boxShadow: "0 0 20px rgba(56, 189, 248, 0.8)" },
+          "0%, 100%": { boxShadow: "0 0 5px rgba(72, 187, 120, 0.5)" },
+          "50%": { boxShadow: "0 0 20px rgba(72, 187, 120, 0.8)" },
         },
       },
       backgroundImage: {
