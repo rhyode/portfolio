@@ -40,14 +40,14 @@ const MobileNav = () => {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100]"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[1001]"
           onClick={closeMenu}
         />
       )}
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-dark-surface transform transition-transform duration-300 ease-in-out z-[101] ${
+        className={`fixed top-0 right-0 h-full w-64 bg-dark-surface transform transition-transform duration-300 ease-in-out z-[1002] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

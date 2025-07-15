@@ -15,19 +15,34 @@ import ScrollToTop from "../components/ScrollToTop";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
+  const toggleTheme = () => {
+    setIsLightMode(!isLightMode);
+  };
+
   return (
-    <div className="min-h-screen bg-dark-bg">
+    <div
+      className={`min-h-screen bg-dark-bg ${isLightMode ? "light-mode" : ""}`}
+    >
+      {/* Theme Toggle Button */}
+      <button
+        onClick={toggleTheme}
+        className="theme-toggle"
+        aria-label="Toggle theme"
+      >
+        {isLightMode ? "🌙" : "☀️"}
+      </button>
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-dark-bg/80 backdrop-blur-sm z-50 border-b border-dark-surface">
+      <nav className="fixed top-0 w-full bg-dark-bg/80 backdrop-blur-sm z-40 border-b border-dark-surface">
         <div className="container-custom py-4">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold text-gradient">TT</div>
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8 mr-16">
               <a href="#about" className="nav-link">
                 About
               </a>
@@ -50,7 +65,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center section-padding">
+      <section className="h-auto py-20 flex items-center section-padding">
         <div
           className={`container-custom text-left ${isLoaded ? "animate-fade-in" : "opacity-0"}`}
         >
@@ -64,16 +79,16 @@ export default function Home() {
               innovative solutions. Currently pursuing B.Tech in Electrical and
               Electronics Engineering at VIT Vellore.
             </p>
-            <div className="flex space-x-6 mb-12">
-              <a href="#contact" className="btn-primary">
+            <div className="flex space-x-4 mb-8">
+              <a href="#contact" className="btn-primary-small">
                 Get In Touch
               </a>
               <a
                 href="/docs/Resume_Tanmay_Tripathi.pdf"
                 target="_blank"
-                className="btn-secondary"
+                className="btn-secondary-small"
               >
-                <DocumentArrowDownIcon className="w-5 h-5 inline mr-2" />
+                <DocumentArrowDownIcon className="w-4 h-4 inline mr-2" />
                 Resume
               </a>
             </div>
