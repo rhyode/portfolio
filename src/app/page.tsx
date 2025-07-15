@@ -86,13 +86,17 @@ export default function Home() {
                 <EnvelopeIcon className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/tanmay-tripathi-09b45a278/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-dark-text hover:text-accent transition-colors"
               >
                 <LinkedInIcon className="w-6 h-6" />
               </a>
               <a
-                href="#"
+                href="https://github.com/rhyode"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-dark-text hover:text-accent transition-colors"
               >
                 <GitHubIcon className="w-6 h-6" />
@@ -286,20 +290,9 @@ export default function Home() {
                 </span>
               </div>
               <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="text-accent hover:text-accent-hover transition-colors"
-                >
-                  <GitHubIcon className="w-5 h-5 inline mr-2" />
-                  Code
-                </a>
-                <a
-                  href="#"
-                  className="text-accent hover:text-accent-hover transition-colors"
-                >
-                  <ExternalLinkIcon className="w-5 h-5 inline mr-2" />
-                  Demo
-                </a>
+                <span className="text-dark-text/40 text-sm">
+                  Repository not available
+                </span>
               </div>
             </div>
             <div className="card">
@@ -328,7 +321,9 @@ export default function Home() {
               </div>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://github.com/rhyode/build_interpreter_self"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-accent hover:text-accent-hover transition-colors"
                 >
                   <GitHubIcon className="w-5 h-5 inline mr-2" />
@@ -417,7 +412,9 @@ export default function Home() {
                 <span>tanmaytrip59@gmail.com</span>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/tanmay-tripathi-09b45a278/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-accent hover:text-accent-hover transition-colors"
               >
                 <LinkedInIcon className="w-6 h-6" />
