@@ -58,7 +58,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.className} font-sans antialiased`}>
         {children}
       </body>
     </html>
