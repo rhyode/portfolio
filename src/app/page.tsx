@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import {
-  ChevronDownIcon,
   EnvelopeIcon,
   DocumentArrowDownIcon,
 } from "@heroicons/react/24/outline";
@@ -51,21 +50,21 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center section-padding">
+      <section className="min-h-screen flex items-center section-padding">
         <div
-          className={`container-custom text-center ${isLoaded ? "animate-fade-in" : "opacity-0"}`}
+          className={`container-custom text-left ${isLoaded ? "animate-fade-in" : "opacity-0"}`}
         >
-          <div className="mb-8">
+          <div className="max-w-4xl">
             <h1 className="heading-primary">Tanmay Tripathi</h1>
             <p className="text-xl md:text-2xl text-dark-text/80 mb-8">
               Self-driven EEE Student & C++ Developer
             </p>
-            <p className="text-lg text-dark-text/60 max-w-2xl mx-auto mb-12">
+            <p className="text-lg text-dark-text/60 max-w-2xl mb-12">
               Passionate about embedded systems, cloud computing, and building
               innovative solutions. Currently pursuing B.Tech in Electrical and
               Electronics Engineering at VIT Vellore.
             </p>
-            <div className="flex justify-center space-x-6 mb-12">
+            <div className="flex space-x-6 mb-12">
               <a href="#contact" className="btn-primary">
                 Get In Touch
               </a>
@@ -78,7 +77,7 @@ export default function Home() {
                 Resume
               </a>
             </div>
-            <div className="flex justify-center space-x-6">
+            <div className="flex space-x-6">
               <a
                 href="mailto:tanmaytrip59@gmail.com"
                 className="text-dark-text hover:text-accent transition-colors"
@@ -103,16 +102,13 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="animate-bounce opacity-60">
-            <ChevronDownIcon className="w-5 h-5 text-accent mx-auto" />
-          </div>
         </div>
       </section>
 
       {/* About Section */}
       <section id="about" className="section-padding bg-dark-surface/30">
         <div className="container-custom">
-          <h2 className="heading-secondary text-center">About Me</h2>
+          <h2 className="heading-secondary">About Me</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-dark-text/80 text-lg leading-relaxed">
@@ -141,7 +137,7 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div className="flex justify-center">
+            <div className="flex">
               <div className="w-80 h-80 rounded-full bg-gradient-to-br from-accent to-blue-600 p-1">
                 <div className="w-full h-full rounded-full bg-dark-surface flex items-center justify-center">
                   <div className="text-6xl font-bold text-gradient">TT</div>
@@ -155,9 +151,7 @@ export default function Home() {
       {/* Skills Section */}
       <section id="skills" className="section-padding">
         <div className="container-custom">
-          <h2 className="heading-secondary text-center">
-            Skills & Technologies
-          </h2>
+          <h2 className="heading-secondary">Skills & Technologies</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="card">
               <h3 className="text-xl font-semibold text-accent mb-4">
@@ -224,7 +218,7 @@ export default function Home() {
       {/* Experience Section */}
       <section id="experience" className="section-padding bg-dark-surface/30">
         <div className="container-custom">
-          <h2 className="heading-secondary text-center">Experience</h2>
+          <h2 className="heading-secondary">Experience</h2>
           <div className="max-w-4xl mx-auto">
             <div className="card">
               <div className="flex justify-between items-start mb-4">
@@ -263,7 +257,7 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="section-padding">
         <div className="container-custom">
-          <h2 className="heading-secondary text-center">Projects</h2>
+          <h2 className="heading-secondary">Projects</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="card">
               <h3 className="text-xl font-semibold text-accent mb-4">
@@ -397,13 +391,13 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="section-padding">
         <div className="container-custom">
-          <h2 className="heading-secondary text-center">Get In Touch</h2>
-          <div className="max-w-2xl mx-auto text-center">
+          <h2 className="heading-secondary">Get In Touch</h2>
+          <div className="max-w-2xl">
             <p className="text-dark-text/80 text-lg mb-8">
               I&apos;m always open to discussing new opportunities, interesting
               projects, or just having a chat about technology.
             </p>
-            <div className="flex justify-center space-x-8">
+            <div className="flex space-x-8">
               <a
                 href="mailto:tanmaytrip59@gmail.com"
                 className="flex items-center space-x-2 text-accent hover:text-accent-hover transition-colors"
