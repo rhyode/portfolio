@@ -151,64 +151,53 @@ export default function Home() {
       {/* Skills Section */}
       <section id="skills" className="section-padding">
         <div className="container-custom">
-          <h2 className="heading-secondary">Skills & Technologies</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="card">
-              <h3 className="text-xl font-semibold text-accent mb-4">
-                Languages
-              </h3>
-              <div className="space-y-2">
-                {["C/C++", "Java", "Python", "SQL", "JavaScript"].map(
-                  (skill) => (
-                    <div key={skill} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-dark-text/80">{skill}</span>
-                    </div>
-                  ),
-                )}
+          <h2 className="heading-secondary">Skills</h2>
+          <div className="space-y-8">
+            {/* Languages */}
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div>
+                <h3 className="text-xl font-semibold text-dark-text mb-4">
+                  Languages
+                </h3>
+              </div>
+              <div className="text-dark-text/80">
+                C/C++, Java, Python, SQL, TypeScript, JavaScript
               </div>
             </div>
-            <div className="card">
-              <h3 className="text-xl font-semibold text-accent mb-4">Tools</h3>
-              <div className="space-y-2">
-                {["Git", "GitHub", "Linux", "MATLAB", "SpringBoot"].map(
-                  (skill) => (
-                    <div key={skill} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-dark-text/80">{skill}</span>
-                    </div>
-                  ),
-                )}
+
+            {/* Tools and Platforms */}
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div>
+                <h3 className="text-xl font-semibold text-dark-text mb-4">
+                  Tools and Platforms
+                </h3>
+              </div>
+              <div className="text-dark-text/80">
+                Git, GitHub, Vercel, Linux, MATLAB, SpringBoot
               </div>
             </div>
-            <div className="card">
-              <h3 className="text-xl font-semibold text-accent mb-4">
-                Domains
-              </h3>
-              <div className="space-y-2">
-                {["DSA", "Shell Scripting", "Embedded C", "Database"].map(
-                  (skill) => (
-                    <div key={skill} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-dark-text/80">{skill}</span>
-                    </div>
-                  ),
-                )}
+
+            {/* Frameworks and Libraries */}
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div>
+                <h3 className="text-xl font-semibold text-dark-text mb-4">
+                  Frameworks and Libraries
+                </h3>
+              </div>
+              <div className="text-dark-text/80">
+                Next.js, React, Tailwind CSS, SpringBoot
               </div>
             </div>
-            <div className="card">
-              <h3 className="text-xl font-semibold text-accent mb-4">
-                Software
-              </h3>
-              <div className="space-y-2">
-                {["Power BI", "PSpice", "Powerworld", "Nuvoton", "Keil"].map(
-                  (skill) => (
-                    <div key={skill} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-dark-text/80">{skill}</span>
-                    </div>
-                  ),
-                )}
+
+            {/* Developer Skills */}
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div>
+                <h3 className="text-xl font-semibold text-dark-text mb-4">
+                  Developer Skills
+                </h3>
+              </div>
+              <div className="text-dark-text/80">
+                DSA, Shell Scripting, Embedded C, Database
               </div>
             </div>
           </div>
