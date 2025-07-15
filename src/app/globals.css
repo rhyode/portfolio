@@ -43,18 +43,18 @@
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: #48bb78;
+        background: #2d3d34;
     }
 
     /* Selection styling */
     ::selection {
-        background: #48bb78;
+        background: #2d3d34;
         color: #1a202c;
     }
 
     /* Focus styles for accessibility */
     *:focus {
-        outline: 2px solid #48bb78;
+        outline: 2px solid #2d3d34;
         outline-offset: 2px;
     }
 }
@@ -66,8 +66,8 @@
         border-radius: 0.5rem;
         transition: all 0.3s ease;
         transform: scale(1);
-        background-color: #48bb78;
-        color: #1a202c;
+        background-color: #2d3d34;
+        color: #f7fafc;
         border: none;
         cursor: pointer;
         text-decoration: none;
@@ -75,7 +75,7 @@
     }
 
     .btn-primary:hover {
-        background-color: #38a169;
+        background-color: #242a26;
         transform: scale(1.05);
     }
 
@@ -84,8 +84,8 @@
         padding: 0.75rem 1.5rem;
         border-radius: 0.5rem;
         transition: all 0.3s ease;
-        border: 2px solid #48bb78;
-        color: #48bb78;
+        border: 2px solid #2d3d34;
+        color: #2d3d34;
         background-color: transparent;
         cursor: pointer;
         text-decoration: none;
@@ -93,8 +93,8 @@
     }
 
     .btn-secondary:hover {
-        background-color: #48bb78;
-        color: #1a202c;
+        background-color: #2d3d34;
+        color: #f7fafc;
     }
 
     .section-padding {
@@ -116,7 +116,7 @@
         font-size: 2.25rem;
         font-weight: 700;
         margin-bottom: 1.5rem;
-        background: linear-gradient(135deg, #48bb78, #38a169);
+        background: linear-gradient(135deg, #2d3d34, #242a26);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -146,11 +146,11 @@
         padding: 1.5rem;
         transition: all 0.3s ease;
         background-color: #2d3748;
-        border: 1px solid rgba(72, 187, 120, 0.1);
+        border: 1px solid rgba(45, 61, 52, 0.1);
     }
 
     .card:hover {
-        box-shadow: 0 10px 30px rgba(72, 187, 120, 0.2);
+        box-shadow: 0 10px 30px rgba(45, 61, 52, 0.2);
     }
 
     .nav-link {
@@ -161,11 +161,11 @@
     }
 
     .nav-link:hover {
-        color: #48bb78;
+        color: #2d3d34;
     }
 
     .text-gradient {
-        background: linear-gradient(135deg, #48bb78, #38a169);
+        background: linear-gradient(135deg, #2d3d34, #242a26);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -174,11 +174,11 @@
     .glass {
         backdrop-filter: blur(10px);
         background: rgba(45, 55, 72, 0.3);
-        border: 1px solid rgba(72, 187, 120, 0.1);
+        border: 1px solid rgba(45, 61, 52, 0.1);
     }
 
     .glow-effect {
-        box-shadow: 0 0 20px rgba(72, 187, 120, 0.3);
+        box-shadow: 0 0 20px rgba(45, 61, 52, 0.3);
     }
 }
 
@@ -200,15 +200,15 @@
     }
 
     .bg-accent {
-        background-color: #48bb78;
+        background-color: #2d3d34;
     }
 
     .bg-accent-hover {
-        background-color: #38a169;
+        background-color: #242a26;
     }
 
     .bg-dark-accent\/20 {
-        background-color: rgba(72, 187, 120, 0.2);
+        background-color: rgba(45, 61, 52, 0.2);
     }
 
     .text-dark-text {
@@ -228,11 +228,11 @@
     }
 
     .text-accent {
-        color: #48bb78;
+        color: #2d3d34;
     }
 
     .text-accent-hover {
-        color: #38a169;
+        color: #242a26;
     }
 
     .border-dark-surface {
@@ -240,7 +240,7 @@
     }
 
     .border-accent {
-        border-color: #48bb78;
+        border-color: #2d3d34;
     }
 
     .animate-fade-in {
@@ -287,12 +287,12 @@
 
 @keyframes glow {
     from {
-        box-shadow: 0 0 5px #48bb78;
+        box-shadow: 0 0 5px #2d3d34;
     }
     to {
         box-shadow:
-            0 0 20px #48bb78,
-            0 0 30px #48bb78;
+            0 0 20px #2d3d34,
+            0 0 30px #2d3d34;
     }
 }
 
@@ -309,10 +309,10 @@
 @keyframes pulse-glow {
     0%,
     100% {
-        box-shadow: 0 0 5px rgba(72, 187, 120, 0.5);
+        box-shadow: 0 0 5px rgba(45, 61, 52, 0.5);
     }
     50% {
-        box-shadow: 0 0 20px rgba(72, 187, 120, 0.8);
+        box-shadow: 0 0 20px rgba(45, 61, 52, 0.8);
     }
 }
 

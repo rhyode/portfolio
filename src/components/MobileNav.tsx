@@ -40,14 +40,14 @@ const MobileNav = () => {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100]"
           onClick={closeMenu}
         />
       )}
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-dark-surface transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`fixed top-0 right-0 h-full w-64 bg-dark-surface transform transition-transform duration-300 ease-in-out z-[101] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -79,7 +79,8 @@ const MobileNav = () => {
           <a
             href="mailto:tanmaytrip59@gmail.com"
             onClick={closeMenu}
-            className="block w-full text-center bg-accent hover:bg-accent-hover text-dark-bg font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+            className="block w-full text-center font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+            style={{ backgroundColor: "#2d3d34", color: "#f7fafc" }}
           >
             Get In Touch
           </a>

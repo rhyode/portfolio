@@ -12,7 +12,7 @@ module.exports = {
         "dark-bg": "#1A202C",
         "dark-surface": "#2D3748",
         "dark-text": "#F7FAFC",
-        "dark-accent": "#48BB78",
+        "dark-accent": "#2d3d34",
 
         // Direct color definitions
         background: {
@@ -29,24 +29,24 @@ module.exports = {
           muted: "#6B7280",
         },
         accent: {
-          DEFAULT: "#48BB78",
-          hover: "#38A169",
-          light: "#68D391",
+          DEFAULT: "#2d3d34",
+          hover: "#242a26",
+          light: "#3e4f42",
         },
       },
       backgroundColor: {
         "dark-bg": "#1A202C",
         "dark-surface": "#2D3748",
-        "dark-accent": "#48BB78",
+        "dark-accent": "#2d3d34",
       },
       textColor: {
         "dark-text": "#F7FAFC",
-        "dark-accent": "#48BB78",
-        "accent-hover": "#38A169",
+        "dark-accent": "#2d3d34",
+        "accent-hover": "#242a26",
       },
       borderColor: {
         "dark-surface": "#2D3748",
-        "dark-accent": "#48BB78",
+        "dark-accent": "#2d3d34",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
@@ -68,16 +68,16 @@ module.exports = {
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
         glow: {
-          "0%": { boxShadow: "0 0 5px #48BB78" },
-          "100%": { boxShadow: "0 0 20px #48BB78, 0 0 30px #48BB78" },
+          "0%": { boxShadow: "0 0 5px #2d3d34" },
+          "100%": { boxShadow: "0 0 20px #2d3d34, 0 0 30px #2d3d34" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 5px rgba(72, 187, 120, 0.5)" },
-          "50%": { boxShadow: "0 0 20px rgba(72, 187, 120, 0.8)" },
+          "0%, 100%": { boxShadow: "0 0 5px rgba(45, 61, 52, 0.5)" },
+          "50%": { boxShadow: "0 0 20px rgba(45, 61, 52, 0.8)" },
         },
       },
       backgroundImage: {
