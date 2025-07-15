@@ -103,8 +103,8 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="animate-bounce">
-            <ChevronDownIcon className="w-8 h-8 text-accent mx-auto" />
+          <div className="animate-bounce opacity-60">
+            <ChevronDownIcon className="w-5 h-5 text-accent mx-auto" />
           </div>
         </div>
       </section>
