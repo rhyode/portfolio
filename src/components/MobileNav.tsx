@@ -80,7 +80,7 @@ const MobileNav = () => {
             href="mailto:tanmaytrip59@gmail.com"
             onClick={closeMenu}
             className="block w-full text-center font-semibold py-3 px-6 rounded-lg transition-all duration-300"
-            style={{ backgroundColor: "#2d3d34", color: "#f7fafc" }}
+            style={{ backgroundColor: "#21a4b5", color: "#f7fafc" }}
           >
             Get In Touch
           </a>
