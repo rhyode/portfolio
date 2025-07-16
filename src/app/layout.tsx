@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tanmay Tripathi - Software Engineer & EEE Student",
+  title: "Tanmay Tripathi - Portfolio",
   description:
-    "Portfolio of Tanmay Tripathi - Self-driven EEE student at VIT Vellore with experience in C++, embedded systems, and cloud computing.",
+    "Portfolio of Tanmay Tripathi - AI enthusiast. EEE student at VIT Vellore with experience in C++, embedded systems, and cloud computing.",
   keywords: [
     "Tanmay Tripathi",
     "Software Engineer",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Tanmay Tripathi" }],
   creator: "Tanmay Tripathi",
   openGraph: {
-    title: "Tanmay Tripathi - Software Engineer & EEE Student",
+    title: "Tanmay Tripathi - Portfolio",
     description:
-      "Portfolio of Tanmay Tripathi - Self-driven EEE student at VIT Vellore with experience in C++, embedded systems, and cloud computing.",
+      "Portfolio of Tanmay Tripathi - AI enthusiast. EEE student at VIT Vellore with experience in C++, embedded systems, and cloud computing.",
     url: "https://tanmay-tripathi.vercel.app",
     siteName: "Tanmay Tripathi Portfolio",
     locale: "en_US",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tanmay Tripathi - Software Engineer & EEE Student",
+    title: "Tanmay Tripathi - Portfolio",
     description:
-      "Portfolio of Tanmay Tripathi - Self-driven EEE student at VIT Vellore with experience in C++, embedded systems, and cloud computing.",
+      "Portfolio of Tanmay Tripathi - AI enthusiast. EEE student at VIT Vellore with experience in C++, embedded systems, and cloud computing.",
     creator: "@tanmaytrip59",
   },
   viewport: "width=device-width, initial-scale=1",
