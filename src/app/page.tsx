@@ -15,27 +15,16 @@ import ScrollToTop from "../components/ScrollToTop";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isLightMode, setIsLightMode] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
-  const toggleTheme = () => {
-    setIsLightMode(!isLightMode);
-  };
-
   return (
-    <div
-      className={`min-h-screen bg-dark-bg ${isLightMode ? "light-mode" : ""}`}
-    >
+    <div className="min-h-screen bg-dark-bg">
       {/* Theme Toggle Button */}
-      <button
-        onClick={toggleTheme}
-        className="theme-toggle"
-        aria-label="Toggle theme"
-      >
-        {isLightMode ? "🌙" : "☀️"}
+      <button className="theme-toggle" aria-label="Toggle theme">
+        ☀️
       </button>
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-dark-bg/80 backdrop-blur-sm z-40 border-b border-dark-surface">
