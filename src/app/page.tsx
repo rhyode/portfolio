@@ -61,12 +61,10 @@ export default function Home() {
           <div className="max-w-4xl">
             <h1 className="heading-primary">Tanmay Tripathi</h1>
             <p className="text-xl md:text-2xl text-dark-text/80 mb-8">
-              Self-driven EEE Student & C++ Developer
+              Self-driven Developer and AI enthusiast
             </p>
             <p className="text-lg text-dark-text/60 max-w-2xl mb-12">
-              Passionate about embedded systems, cloud computing, and building
-              innovative solutions. Currently pursuing B.Tech in Electrical and
-              Electronics Engineering at VIT Vellore.
+              Self driven AI enthusiast, and degree driven embedded and electrical enthusiast.Passionate about building stuff, and using endless possibilities of AI. Currently pursuing B.Tech in EEE at VIT Vellore.
             </p>
             <div className="flex space-x-4 mb-8">
               <a href="#contact" className="btn-primary-small">
