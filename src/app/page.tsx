@@ -114,7 +114,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-dark-text/80 text-lg leading-relaxed">
-                I&apos;m a self-driven Electrical and Electronics Engineering
+                I&apos;m an Electrical and Electronics Engineering
                 student at VIT Vellore with a passion for software development
                 and embedded systems. With hands-on experience in C++, cloud
                 computing, and system-level programming, I enjoy building
