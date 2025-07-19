@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect } from "react";
 import DigitalBrain from "../components/common/DigitalBrain";
+import ThemeToggle from "../components/ThemeToggle";
 
 export default function Home() {
   useEffect(() => {
@@ -35,27 +35,26 @@ export default function Home() {
 
       {/* Sticky Header */}
       <header className="fixed top-0 w-full z-50 glass-card">
-        <nav className="container mx-auto px-8 py-12 flex justify-between items-center">
-          <Link
-            href="/"
-            className="rounded-full w-40 h-40 flex items-center justify-center border-0.5 border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 ease-in-out shadow-lg shadow-cyan-400/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50"
-          >
-            <div className="text-6xl font-black glow-text">TT</div>
-          </Link>
-          <div className="hidden md:flex space-x-14 text-3xl font-bold">
-            <a href="#about" className="hover:glow-text transition-all">
+        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="text-xl font-bold text-slate-800">
+            Tanmay Tripathi
+          </div>
+          <div className="hidden md:flex space-x-8 text-sm font-medium text-slate-700">
+            <a href="#about" className="hover:accent-text transition-all">
               About
             </a>
-            <a href="#skills" className="hover:glow-text transition-all">
+            <a href="#skills" className="hover:accent-text transition-all">
               Skills
             </a>
-            <a href="#projects" className="hover:glow-text transition-all">
+            <a href="#projects" className="hover:accent-text transition-all">
               Projects
             </a>
-            <a href="#contact" className="hover:glow-text transition-all">
+            <a href="#contact" className="hover:accent-text transition-all">
               Contact
             </a>
           </div>
+          {/* If you have a ThemeToggle component, you can place it here */}
+          {/* <ThemeToggle /> */}
         </nav>
       </header>
 
@@ -68,15 +67,10 @@ export default function Home() {
         ></div>
 
         {/* Hero Section */}
-        <section
-          id="hero"
-          className="min-h-[60vh] flex items-center text-center fade-in"
-        >
+        <section id="hero" className="min-h-[30vh] flex left fade-in">
+          .
           <div className="w-full">
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-tight">
-              Tanmay Tripathi
-            </h1>
-            <p className="text-2xl md:text-3xl mt-4 glow-text">
+            <p className="text-2xl md:text-3xl mt-8 glow-text ">
               Self-driven Developer & AI Enthusiast
             </p>
             <p className="max-w-3xl mx-auto mt-6 text-lg text-gray-400">
@@ -118,20 +112,24 @@ export default function Home() {
         {/* Skills Section */}
         <section id="skills" className="py-20 fade-in">
           <h2 className="text-4xl font-bold text-center mb-12 glow-text">
-            My Skillset
+            Core Technologies
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="glass-card rounded-xl p-6">
               <h3 className="text-xl font-bold mb-4 glow-text">Languages</h3>
-              <p className="text-gray-300">
-                C++, Java, Python, SQL, TypeScript
-              </p>
+              <p className="text-gray-300">C++, Java, Python, SQL</p>
             </div>
             <div className="glass-card rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4 glow-text">
-                Frameworks & Libraries
-              </h3>
-              <p className="text-gray-300">Next.js, React, Tailwind CSS</p>
+              <h3 className="text-xl font-bold mb-4 glow-text">Frameworks</h3>
+              <p className="text-gray-300">Next.js, React, Tailwind</p>
+            </div>
+            <div className="glass-card rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-4 glow-text">Platforms</h3>
+              <p className="text-gray-300">Git, GitHub, Vercel, Linux</p>
+            </div>
+            <div className="glass-card rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-4 glow-text">Skills</h3>
+              <p className="text-gray-300">DSA, Embedded C</p>
             </div>
           </div>
         </section>

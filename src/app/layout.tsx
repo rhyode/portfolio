@@ -44,6 +44,8 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
+import { ThemeProvider } from "../context/ThemeContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,7 +59,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }

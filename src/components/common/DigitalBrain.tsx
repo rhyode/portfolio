@@ -2,9 +2,11 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { useTheme } from "../../context/ThemeContext";
 
 const DigitalBrain = () => {
   const mountRef = useRef<HTMLCanvasElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (!mountRef.current) return;
@@ -46,14 +48,10 @@ const DigitalBrain = () => {
         new THREE.Float32BufferAttribute(starVertices, 3),
       );
 
-      // Texture for the particles
-      const sprite = new THREE.TextureLoader().load(
-        "https://placehold.co/16x16/14B8A6/000000.png?text=+",
-      );
+      // Material for the particles
       const starMaterial = new THREE.PointsMaterial({
-        color: 0x14b8a6, // Teal color
-        size: 0.7,
-        map: sprite,
+        color: theme === "dark" ? 0x14b8a6 : 0xf97316, // Teal for dark, Orange for light
+        size: theme === "dark" ? 0.7 : 0.3, // Larger particles for dark mode
         transparent: true,
         opacity: 0.7,
       });
@@ -105,7 +103,7 @@ const DigitalBrain = () => {
         (stars.material as THREE.PointsMaterial).dispose();
       }
     };
-  }, []);
+  }, [theme]);
 
   return (
     <canvas
@@ -124,3 +122,5 @@ const DigitalBrain = () => {
 };
 
 export default DigitalBrain;
+
+//export default DigitalBrain;
