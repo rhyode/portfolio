@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
 
 const DigitalBrain = () => {
   const mountRef = useRef<HTMLCanvasElement>(null);
@@ -21,7 +21,7 @@ const DigitalBrain = () => {
         60,
         window.innerWidth / window.innerHeight,
         1,
-        1000
+        1000,
       );
       camera.position.z = 5;
 
@@ -42,13 +42,13 @@ const DigitalBrain = () => {
         starVertices.push(x, y, z);
       }
       starGeo.setAttribute(
-        'position',
-        new THREE.Float32BufferAttribute(starVertices, 3)
+        "position",
+        new THREE.Float32BufferAttribute(starVertices, 3),
       );
 
       // Texture for the particles
       const sprite = new THREE.TextureLoader().load(
-        'https://placehold.co/16x16/14B8A6/000000.png?text=+'
+        "https://placehold.co/16x16/14B8A6/000000.png?text=+",
       );
       const starMaterial = new THREE.PointsMaterial({
         color: 0x14b8a6, // Teal color
@@ -62,7 +62,7 @@ const DigitalBrain = () => {
       scene.add(stars);
 
       // Handle window resizing
-      window.addEventListener('resize', onWindowResize, false);
+      window.addEventListener("resize", onWindowResize, false);
 
       // Start the animation loop
       animate();
@@ -89,7 +89,7 @@ const DigitalBrain = () => {
     init();
 
     return () => {
-      window.removeEventListener('resize', onWindowResize);
+      window.removeEventListener("resize", onWindowResize);
       // Basic cleanup
       if (renderer) {
         renderer.dispose();
@@ -99,13 +99,28 @@ const DigitalBrain = () => {
         // For this simple case, it's not strictly necessary but good practice
         scene.remove(stars);
         (stars.geometry as THREE.BufferGeometry).dispose();
-        ((stars.material as THREE.PointsMaterial).map as THREE.Texture)?.dispose();
+        (
+          (stars.material as THREE.PointsMaterial).map as THREE.Texture
+        )?.dispose();
         (stars.material as THREE.PointsMaterial).dispose();
       }
     };
   }, []);
 
-  return <canvas id="bg-canvas" ref={mountRef} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }} />;
+  return (
+    <canvas
+      id="bg-canvas"
+      ref={mountRef}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        zIndex: -1,
+      }}
+    />
+  );
 };
 
 export default DigitalBrain;

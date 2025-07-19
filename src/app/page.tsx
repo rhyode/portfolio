@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect } from "react";
 import DigitalBrain from "../components/common/DigitalBrain";
 
@@ -33,10 +34,15 @@ export default function Home() {
       <DigitalBrain />
 
       {/* Sticky Header */}
-      <header className="fixed top-0 w-full z-50 glass-card bg-red-500">
-        <nav className="container mx-auto px-6 py-10 flex justify-between items-center">
-          <div className="text-7xl font-black glow-text">TT</div>
-          <div className="hidden md:flex space-x-12 text-2xl font-bold">
+      <header className="fixed top-0 w-full z-50 glass-card">
+        <nav className="container mx-auto px-8 py-12 flex justify-between items-center">
+          <Link
+            href="/"
+            className="rounded-full w-40 h-40 flex items-center justify-center border-0.5 border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 ease-in-out shadow-lg shadow-cyan-400/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50"
+          >
+            <div className="text-6xl font-black glow-text">TT</div>
+          </Link>
+          <div className="hidden md:flex space-x-14 text-3xl font-bold">
             <a href="#about" className="hover:glow-text transition-all">
               About
             </a>
