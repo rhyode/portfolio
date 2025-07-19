@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+});
 
 export const metadata: Metadata = {
-  title: "Tanmay Tripathi - About me",
+  title: "Tanmay Tripathi - The Digital Brain",
   description:
-    "Portfolio of Tanmay Tripathi - AI enthusiast. EEE student at VIT Vellore with experience in C++, embedded systems, and cloud computing.",
+    "Exploring the digital mind of Tanmay Tripathi, a developer's portfolio designed as a living neural network.",
   keywords: [
     "Tanmay Tripathi",
     "Software Engineer",
@@ -15,23 +18,26 @@ export const metadata: Metadata = {
     "Embedded Systems",
     "VIT Vellore",
     "Portfolio",
+    "AI",
+    "Digital Brain",
+    "Neural Network",
   ],
   authors: [{ name: "Tanmay Tripathi" }],
   creator: "Tanmay Tripathi",
   openGraph: {
-    title: "Tanmay Tripathi - About me",
+    title: "Tanmay Tripathi - The Digital Brain",
     description:
-      "Portfolio of Tanmay Tripathi - AI enthusiast. EEE student at VIT Vellore with experience in C++, embedded systems, and cloud computing.",
+      "Exploring the digital mind of Tanmay Tripathi, a developer's portfolio designed as a living neural network.",
     url: "https://tanmay-tripathi.vercel.app",
-    siteName: "Tanmay Tripathi - About me",
+    siteName: "Tanmay Tripathi's Digital Brain",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tanmay Tripathi - About me",
+    title: "Tanmay Tripathi - The Digital Brain",
     description:
-      "Portfolio of Tanmay Tripathi - AI enthusiast. EEE student at VIT Vellore with experience in C++, embedded systems, and cloud computing.",
+      "Exploring the digital mind of Tanmay Tripathi, a developer's portfolio designed as a living neural network.",
     creator: "@tanmaytrip59",
   },
   viewport: "width=device-width, initial-scale=1",
@@ -46,21 +52,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#111827" />
+        <meta name="theme-color" content="#050505" />
         <link rel="icon" href="/portf.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
       </head>
-      <body className={`${inter.className} font-sans antialiased`}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

@@ -1,425 +1,175 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import {
-  EnvelopeIcon,
-  DocumentArrowDownIcon,
-} from "@heroicons/react/24/outline";
-import {
-  LinkedInIcon,
-  GitHubIcon,
-  ExternalLinkIcon,
-} from "../components/icons";
-import MobileNav from "../components/MobileNav";
-import ScrollToTop from "../components/ScrollToTop";
+import { useEffect } from "react";
+import DigitalBrain from "../components/common/DigitalBrain";
 
 export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
-    setIsLoaded(true);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    const elements = document.querySelectorAll(".fade-in");
+    elements.forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => {
+      elements.forEach((el) => {
+        observer.unobserve(el);
+      });
+    };
   }, []);
 
   return (
-    <div className="min-h-screen bg-dark-bg">
-      {/* Theme Toggle Button */}
-      <button className="theme-toggle" aria-label="Toggle theme">
-        ☀️
-      </button>
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-dark-bg/80 backdrop-blur-sm z-40 border-b border-dark-surface">
-        <div className="container-custom py-4">
-          <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-gradient">TT</div>
-            <div className="hidden md:flex space-x-8 mr-16">
-              <a href="#about" className="nav-link">
-                About
-              </a>
-              <a href="#skills" className="nav-link">
-                Skills
-              </a>
-              <a href="#experience" className="nav-link">
-                Experience
-              </a>
-              <a href="#projects" className="nav-link">
-                Projects
-              </a>
-              <a href="#contact" className="nav-link">
-                Contact
-              </a>
-            </div>
-            <MobileNav />
-          </div>
-        </div>
-      </nav>
+    <div className="overflow-y-scroll">
+      <DigitalBrain />
 
-      {/* Hero Section */}
-      <section className="h-auto py-20 flex items-center section-padding">
+      {/* Sticky Header */}
+      <header className="fixed top-0 w-full z-50 glass-card">
+        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="text-2xl font-bold glow-text">TT</div>
+          <div className="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#about" className="hover:glow-text transition-all">
+              About
+            </a>
+            <a href="#skills" className="hover:glow-text transition-all">
+              Skills
+            </a>
+            <a href="#projects" className="hover:glow-text transition-all">
+              Projects
+            </a>
+            <a href="#contact" className="hover:glow-text transition-all">
+              Contact
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      {/* Main Content */}
+      <main className="relative container mx-auto px-6 pt-32 pb-20">
+        {/* Synapse Line 1 */}
         <div
-          className={`container-custom text-left ${isLoaded ? "animate-fade-in" : "opacity-0"}`}
+          className="synapse"
+          style={{ top: "200px", height: "150px" }}
+        ></div>
+
+        {/* Hero Section */}
+        <section
+          id="hero"
+          className="min-h-[60vh] flex items-center text-center fade-in"
         >
-          <div className="max-w-4xl">
-            <h1 className="heading-primary">Tanmay Tripathi</h1>
-            <p className="text-xl md:text-2xl text-dark-text/80 mb-8">
-              Self-driven Developer and AI enthusiast
+          <div className="w-full">
+            <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-tight">
+              Tanmay Tripathi
+            </h1>
+            <p className="text-2xl md:text-3xl mt-4 glow-text">
+              Self-driven Developer & AI Enthusiast
             </p>
-            <p className="text-lg text-dark-text/60 max-w-2xl mb-12">
-              Self driven AI enthusiast, and degree driven embedded and electrical enthusiast.Passionate about building stuff, and using endless possibilities of AI. Currently pursuing B.Tech in EEE at VIT Vellore.
+            <p className="max-w-3xl mx-auto mt-6 text-lg text-gray-400">
+              A passionate Electrical and Electronics Engineering student at VIT
+              Vellore, specializing in C++, embedded systems, and building
+              intelligent solutions that bridge hardware and software.
             </p>
-            <div className="flex space-x-4 mb-8">
-              <a href="#contact" className="btn-primary-small">
-                Get In Touch
-              </a>
-              <a
-                href="/docs/Resume_Tanmay_Tripathi.pdf"
-                target="_blank"
-                className="btn-secondary-small"
-              >
-                <DocumentArrowDownIcon className="w-4 h-4 inline mr-2" />
-                Resume
-              </a>
-            </div>
-            <div className="flex space-x-6">
-              <a
-                href="mailto:tanmaytrip59@gmail.com"
-                className="text-dark-text hover:text-accent transition-colors"
-              >
-                <EnvelopeIcon className="w-6 h-6" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/tanmay-tripathi-09b45a278/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-dark-text hover:text-accent transition-colors"
-              >
-                <LinkedInIcon className="w-6 h-6" />
-              </a>
-              <a
-                href="https://github.com/rhyode"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-dark-text hover:text-accent transition-colors"
-              >
-                <GitHubIcon className="w-6 h-6" />
-              </a>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* About Section */}
-      <section id="about" className="section-padding bg-dark-surface/30">
-        <div className="container-custom">
-          <h2 className="heading-secondary">About Me</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <p className="text-dark-text/80 text-lg leading-relaxed">
-                I&apos;m an Electrical and Electronics Engineering
-                student at VIT Vellore with a passion for software development
-                and embedded systems. With hands-on experience in C++, cloud
-                computing, and system-level programming, I enjoy building
-                solutions that bridge hardware and software.
+        {/* Synapse Line 2 */}
+        <div
+          className="synapse"
+          style={{ top: "calc(60vh + 150px)", height: "200px" }}
+        ></div>
+
+        {/* About Section */}
+        <section id="about" className="py-20 fade-in">
+          <div className="glass-card rounded-2xl p-8 md:p-12">
+            <h2 className="text-4xl font-bold text-center mb-8 glow-text">
+              About Me
+            </h2>
+            <p className="text-center max-w-3xl mx-auto text-gray-300 leading-relaxed">
+              I'm an Electrical and Electronics Engineering student at VIT
+              Vellore with a deep passion for software development and embedded
+              systems. With hands-on experience in C++, cloud computing, and
+              system-level programming, I enjoy building robust solutions that
+              solve real-world problems.
+            </p>
+          </div>
+        </section>
+
+        {/* Synapse Line 3 */}
+        <div
+          className="synapse"
+          style={{ top: "calc(60vh + 600px)", height: "250px" }}
+        ></div>
+
+        {/* Skills Section */}
+        <section id="skills" className="py-20 fade-in">
+          <h2 className="text-4xl font-bold text-center mb-12 glow-text">
+            My Skillset
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="glass-card rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-4 glow-text">Languages</h3>
+              <p className="text-gray-300">
+                C++, Java, Python, SQL, TypeScript
               </p>
-              <p className="text-dark-text/80 text-lg leading-relaxed">
-                Currently working as a C++ Intern at Kineton, where I develop
-                software modules for AI and semiconductor systems. I have a
-                strong foundation in data structures and algorithms, and
-                I&apos;m continuously expanding my knowledge in emerging
-                technologies.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <span className="px-4 py-2 bg-dark-accent/20 text-accent rounded-full text-sm">
-                  Problem Solver
-                </span>
-                <span className="px-4 py-2 bg-dark-accent/20 text-accent rounded-full text-sm">
-                  Team Player
-                </span>
-                <span className="px-4 py-2 bg-dark-accent/20 text-accent rounded-full text-sm">
-                  Continuous Learner
-                </span>
-              </div>
             </div>
-            <div className="flex">
-              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-accent to-blue-600 p-1">
-                <div className="w-full h-full rounded-full bg-dark-surface flex items-center justify-center">
-                  <div className="text-6xl font-bold text-gradient">TT</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section id="skills" className="section-padding">
-        <div className="container-custom">
-          <h2 className="heading-secondary">Skills</h2>
-          <div className="space-y-8">
-            {/* Languages */}
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div>
-                <h3 className="text-xl font-semibold text-dark-text mb-4">
-                  Languages
-                </h3>
-              </div>
-              <div className="text-dark-text/80">
-                C/C++, Java, Python, SQL, TypeScript, JavaScript
-              </div>
-            </div>
-
-            {/* Tools and Platforms */}
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div>
-                <h3 className="text-xl font-semibold text-dark-text mb-4">
-                  Tools and Platforms
-                </h3>
-              </div>
-              <div className="text-dark-text/80">
-                Git, GitHub, Vercel, Linux, MATLAB, SpringBoot
-              </div>
-            </div>
-
-            {/* Frameworks and Libraries */}
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div>
-                <h3 className="text-xl font-semibold text-dark-text mb-4">
-                  Frameworks and Libraries
-                </h3>
-              </div>
-              <div className="text-dark-text/80">
-                Next.js, React, Tailwind CSS, SpringBoot
-              </div>
-            </div>
-
-            {/* Developer Skills */}
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div>
-                <h3 className="text-xl font-semibold text-dark-text mb-4">
-                  Developer Skills
-                </h3>
-              </div>
-              <div className="text-dark-text/80">
-                DSA, Shell Scripting, Embedded C, Database
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section id="experience" className="section-padding bg-dark-surface/30">
-        <div className="container-custom">
-          <h2 className="heading-secondary">Experience</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="card">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-2xl font-semibold text-accent">
-                    C++ Intern
-                  </h3>
-                  <p className="text-dark-text/80">Kineton</p>
-                </div>
-                <span className="text-dark-text/60 text-sm">
-                  May 2025 - Present
-                </span>
-              </div>
-              <ul className="space-y-2 text-dark-text/80">
-                <li className="flex items-start space-x-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>
-                    Developed C++ software modules for Kineton&apos;s AI and
-                    semiconductor systems, focusing on the &apos;Baseplate&apos;
-                    as well as &apos;Fabric&apos; interface engine
-                  </span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>
-                    Collaborated with 3 developers to design modules in C++ for
-                    intelligent hardware
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="section-padding">
-        <div className="container-custom">
-          <h2 className="heading-secondary">Projects</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="card">
-              <h3 className="text-xl font-semibold text-accent mb-4">
-                Build Your Own Shell
+            <div className="glass-card rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-4 glow-text">
+                Frameworks & Libraries
               </h3>
-              <p className="text-dark-text/60 text-sm mb-4">
-                February 2025 - March 2025
-              </p>
-              <p className="text-dark-text/80 mb-4">
-                Developed a custom Unix-like shell from scratch using C++ with
-                core functionalities: command parsing, process handling, I/O
-                redirection. Designed a REPL to handle user input with built-in
-                commands (cd, exit, pwd).
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">
-                  C++
-                </span>
-                <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">
-                  Unix
-                </span>
-                <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">
-                  Shell Scripting
-                </span>
-              </div>
-              <div className="flex space-x-4">
-                <span className="text-dark-text/40 text-sm">
-                  Repository not available
-                </span>
-              </div>
-            </div>
-            <div className="card">
-              <h3 className="text-xl font-semibold text-accent mb-4">
-                Build Your Own Interpreter
-              </h3>
-              <p className="text-dark-text/60 text-sm mb-4">
-                April 2025 - Present
-              </p>
-              <p className="text-dark-text/80 mb-4">
-                Currently working on designing an interpreter using parsing
-                techniques and lexical analysis. Implementing variable
-                assignments, control structures, and function calls to create a
-                functional programming language interpreter.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">
-                  C++
-                </span>
-                <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">
-                  Parsing
-                </span>
-                <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">
-                  Lexical Analysis
-                </span>
-              </div>
-              <div className="flex space-x-4">
-                <a
-                  href="https://github.com/rhyode/build_interpreter_self"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent hover:text-accent-hover transition-colors"
-                >
-                  <GitHubIcon className="w-5 h-5 inline mr-2" />
-                  Code
-                </a>
-                <span className="text-dark-text/40 text-sm">In Progress</span>
-              </div>
+              <p className="text-gray-300">Next.js, React, Tailwind CSS</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Education & Activities */}
-      <section className="section-padding bg-dark-surface/30">
-        <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-2xl font-semibold text-accent mb-6">
-                Education
-              </h2>
-              <div className="card">
-                <h3 className="text-xl font-semibold text-dark-text mb-2">
-                  B.Tech in Electrical and Electronics Engineering
-                </h3>
-                <p className="text-accent mb-2">VIT Vellore</p>
-                <p className="text-dark-text/60 mb-4">2022 - 2026</p>
-                <p className="text-dark-text/80">
-                  Relevant Coursework: Competitive Coding, Microprocessor,
-                  Embedded C, AWS for Cloud Computing, Machine Learning,
-                  Artificial Intelligence, DSA
-                </p>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-2xl font-semibold text-accent mb-6">
-                Activities
-              </h2>
-              <div className="space-y-4">
-                <div className="card">
-                  <h3 className="text-lg font-semibold text-dark-text mb-2">
-                    Hack the Dash
-                  </h3>
-                  <p className="text-dark-text/80">
-                    Learned and implemented Power BI for a data analysis
-                    hackathon, and stood as a runner up
-                  </p>
-                </div>
-                <div className="card">
-                  <h3 className="text-lg font-semibold text-dark-text mb-2">
-                    Senior Core VIT Music Club
-                  </h3>
-                  <p className="text-dark-text/80">
-                    An enthusiastic singer and managed a college band for 2
-                    years
-                  </p>
-                </div>
-                <div className="card">
-                  <h3 className="text-lg font-semibold text-dark-text mb-2">
-                    Physical Fitness
-                  </h3>
-                  <p className="text-dark-text/80">
-                    Regular training and maintaining active lifestyle
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        {/* Synapse Line 4 */}
+        <div
+          className="synapse"
+          style={{ top: "calc(60vh + 1100px)", height: "200px" }}
+        ></div>
 
-      {/* Contact Section */}
-      <section id="contact" className="section-padding">
-        <div className="container-custom">
-          <h2 className="heading-secondary">Get In Touch</h2>
-          <div className="max-w-2xl">
-            <p className="text-dark-text/80 text-lg mb-8">
-              I&apos;m always open to discussing new opportunities, interesting
-              projects, or just having a chat about technology.
+        {/* Projects Section */}
+        <section id="projects" className="py-20 fade-in">
+          <h2 className="text-4xl font-bold text-center mb-12 glow-text">
+            Featured Projects
+          </h2>
+          <div className="glass-card rounded-2xl p-8 md:p-12">
+            <h3 className="text-2xl font-bold mb-2 glow-text">
+              Build Your Own Interpreter
+            </h3>
+            <p className="text-gray-300">
+              Currently designing an interpreter using parsing techniques and
+              lexical analysis to create a functional programming language
+              interpreter.
             </p>
-            <div className="flex space-x-8">
-              <a
-                href="mailto:tanmaytrip59@gmail.com"
-                className="flex items-center space-x-2 text-accent hover:text-accent-hover transition-colors"
-              >
-                <EnvelopeIcon className="w-6 h-6" />
-                <span>tanmaytrip59@gmail.com</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/tanmay-tripathi-09b45a278/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-accent hover:text-accent-hover transition-colors"
-              >
-                <LinkedInIcon className="w-6 h-6" />
-                <span>LinkedIn</span>
-              </a>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Footer */}
-      <footer className="bg-dark-surface py-8">
-        <div className="container-custom text-center">
-          <p className="text-dark-text/60">
-            © 2025 Tanmay Tripathi. Built with Next.js and Tailwind CSS.
+        {/* Contact Section */}
+        <section id="contact" className="py-20 text-center fade-in">
+          <h2 className="text-4xl font-bold text-center mb-8 glow-text">
+            Get In Touch
+          </h2>
+          <p className="max-w-xl mx-auto text-gray-300 mb-8">
+            I'm always open to discussing new opportunities or interesting
+            projects. Feel free to reach out!
           </p>
-        </div>
-      </footer>
-
-      <ScrollToTop />
+          <a
+            href="mailto:tanmaytrip59@gmail.com"
+            className="inline-block bg-teal-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-teal-600 transition-colors"
+          >
+            Contact Me
+          </a>
+        </section>
+      </main>
     </div>
   );
 }
