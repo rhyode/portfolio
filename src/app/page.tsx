@@ -94,7 +94,7 @@ export default function Home() {
               About Me
             </h2>
             <p className="text-center max-w-3xl mx-auto text-gray-300 leading-relaxed">
-              I'm an Electrical and Electronics Engineering student at VIT
+              I&apos m an Electrical and Electronics Engineering student at VIT
               Vellore with a deep passion for software development and embedded
               systems. With hands-on experience in C++, cloud computing, and
               system-level programming, I enjoy building robust solutions that
