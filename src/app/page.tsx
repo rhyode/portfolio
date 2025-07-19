@@ -34,9 +34,9 @@ export default function Home() {
 
       {/* Sticky Header */}
       <header className="fixed top-0 w-full z-50 glass-card">
-        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold glow-text">TT</div>
-          <div className="hidden md:flex space-x-8 text-sm font-medium">
+        <nav className="container mx-auto px-6 py-6 flex justify-between items-center">
+          <div className="text-3xl font-bold glow-text">TT</div>
+          <div className="hidden md:flex space-x-8 text-base font-medium">
             <a href="#about" className="hover:glow-text transition-all">
               About
             </a>
@@ -84,7 +84,7 @@ export default function Home() {
         {/* Synapse Line 2 */}
         <div
           className="synapse"
-          style={{ top: "calc(60vh + 150px)", height: "200px" }}
+          style={{ top: "calc(60vh + 150px)", height: "100px" }}
         ></div>
 
         {/* About Section */}
@@ -106,7 +106,7 @@ export default function Home() {
         {/* Synapse Line 3 */}
         <div
           className="synapse"
-          style={{ top: "calc(60vh + 600px)", height: "250px" }}
+          style={{ top: "calc(60vh + 600px)", height: "120px" }}
         ></div>
 
         {/* Skills Section */}
@@ -133,7 +133,7 @@ export default function Home() {
         {/* Synapse Line 4 */}
         <div
           className="synapse"
-          style={{ top: "calc(60vh + 1100px)", height: "200px" }}
+          style={{ top: "calc(60vh + 1100px)", height: "100px" }}
         ></div>
 
         {/* Projects Section */}
