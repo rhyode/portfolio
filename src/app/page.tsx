@@ -34,9 +34,9 @@ export default function Home() {
 
       {/* Sticky Header */}
       <header className="fixed top-0 w-full z-50 glass-card">
-        <nav className="container mx-auto px-6 py-8 flex justify-between items-center">
-          <div className="text-5xl font-black glow-text">TT</div>
-          <div className="hidden md:flex space-x-10 text-lg font-bold">
+        <nav className="container mx-auto px-6 py-10 flex justify-between items-center">
+          <div className="text-7xl font-black glow-text">TT</div>
+          <div className="hidden md:flex space-x-12 text-2xl font-bold">
             <a href="#about" className="hover:glow-text transition-all">
               About
             </a>
