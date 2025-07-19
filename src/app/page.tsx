@@ -33,7 +33,7 @@ export default function Home() {
       <DigitalBrain />
 
       {/* Sticky Header */}
-      <header className="fixed top-0 w-full z-50 glass-card">
+      <header className="fixed top-0 w-full z-50 glass-card bg-red-500">
         <nav className="container mx-auto px-6 py-10 flex justify-between items-center">
           <div className="text-7xl font-black glow-text">TT</div>
           <div className="hidden md:flex space-x-12 text-2xl font-bold">
