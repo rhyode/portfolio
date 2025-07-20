@@ -1,64 +1,73 @@
-import { useTheme } from "../context/ThemeContext";
-import { useState } from "react";
+"use client";
 
-const ThemeToggle = () => {
+import { useState, useEffect } from "react";
+import { useTheme } from "../context/ThemeContext"; // Assuming your custom context is here
+
+export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+  const isDarkMode = theme === "dark";
 
   return (
     <button
       onClick={toggleTheme}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300 focus:outline-none"
+      className={`relative w-16 h-8 rounded-full flex items-center cursor-pointer transition-all duration-500 ease-in-out ${
+        isDarkMode ? "bg-teal-500" : "bg-orange-500"
+      } shadow-inner shadow-gray-700 focus:outline-none`}
       aria-label="Toggle Theme"
+      style={{
+        padding: "4px", // Matches the '4' on Tailwind's spacing scale
+      }}
     >
+      {/* The slider handle */}
       <div
-        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
-          theme === "light" ? "opacity-100" : "opacity-0"
-        }`}
+        className={`absolute top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white shadow-md transition-transform duration-500 ease-in-out ${
+          isDarkMode ? "translate-x-8" : "translate-x-0"
+        } ${isHovered ? "scale-110" : ""}`}
       >
+        {/* Sun Icon (Visible in Light Mode) */}
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className={`w-6 h-6 text-yellow-500 ${
-            isHovered ? "scale-110" : "scale-100"
-          } transition-transform duration-300`}
+          className={`w-full h-full p-1 transition-opacity duration-500 ease-in-out ${
+            isDarkMode ? "opacity-0" : "opacity-100"
+          }`}
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
+          stroke="#F97316" // Orange for sun
         >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 16.95l-1.414 1.414m12.728 0l-1.414-1.414M7.05 7.05L5.636 5.636M12 8a4 4 0 100 8 4 4 0 000-8z"
+            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
           />
         </svg>
-      </div>
-      <div
-        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
-          theme === "dark" ? "opacity-100" : "opacity-0"
-        }`}
-      >
+        {/* Moon Icon (Visible in Dark Mode) */}
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className={`w-6 h-6 text-gray-400 ${
-            isHovered ? "scale-110" : "scale-100"
-          } transition-transform duration-300`}
+          className={`w-full h-full p-1 transition-opacity duration-500 ease-in-out absolute top-0 left-0 ${
+            isDarkMode ? "opacity-100" : "opacity-0"
+          }`}
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
+          stroke="#14B8A6" // Teal for moon
         >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={2}
-            d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"
+            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
           />
         </svg>
       </div>
     </button>
   );
-};
-
-export default ThemeToggle;
+}

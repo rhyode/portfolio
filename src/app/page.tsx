@@ -53,8 +53,8 @@ export default function Home() {
               Contact
             </a>
           </div>
-          {/* If you have a ThemeToggle component, you can place it here */}
-          {/* <ThemeToggle /> */}
+          {/* ThemeToggle component is now uncommented */}
+          <ThemeToggle />
         </nav>
       </header>
 
@@ -68,7 +68,6 @@ export default function Home() {
 
         {/* Hero Section */}
         <section id="hero" className="min-h-[30vh] flex left fade-in">
-          .
           <div className="w-full">
             <p className="text-2xl md:text-3xl mt-8 glow-text ">
               Self-driven Developer & AI Enthusiast
