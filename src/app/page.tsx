@@ -35,14 +35,12 @@ export default function Home() {
 
       {/* Sticky Header */}
       <header className="fixed top-0 w-full z-50 glass-card">
-        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-xl font-bold text-slate-800">
-            Tanmay Tripathi
-          </div>
-          <div className="hidden md:flex space-x-8 text-sm font-medium text-slate-700">
+        {/* <nav className="container mx-auto px-6 py-4 flex justify-between items-center"> */}
+        <div className="text-xl flex left font-bold">Tanmay Tripathi</div>
+        {/*<div className="hidden md:flex space-x-8 text-sm font-medium">
             <a href="#about" className="hover:accent-text transition-all">
-              About
-            </a>
+              //About
+               </a>
             <a href="#skills" className="hover:accent-text transition-all">
               Skills
             </a>
@@ -52,24 +50,24 @@ export default function Home() {
             <a href="#contact" className="hover:accent-text transition-all">
               Contact
             </a>
-          </div>
-          {/* ThemeToggle component is now uncommented */}
-          <ThemeToggle />
-        </nav>
+          </div>*/}
+        {/* ThemeToggle component is now uncommented */}
+        {/*<ThemeToggle />*/}
+        {/*</nav>*/}
       </header>
 
       {/* Main Content */}
-      <main className="relative container mx-auto px-6 pt-32 pb-20">
+      <main className="relative container mx-auto px-6 pt-48 pb-20">
         {/* Synapse Line 1 */}
         <div
           className="synapse"
-          style={{ top: "200px", height: "150px" }}
+          style={{ top: "150px", height: "100px" }}
         ></div>
 
         {/* Hero Section */}
-        <section id="hero" className="min-h-[30vh] flex left fade-in">
-          <div className="w-full">
-            <p className="text-2xl md:text-3xl mt-8 glow-text ">
+        <section id="hero" className="min-h-[30vh] fade-in flex items-center">
+          <div className="w-full text-left">
+            <p className="text-2xl md:text-3xl glow-text">
               Self-driven Developer & AI Enthusiast
             </p>
             <p className="max-w-3xl mx-auto mt-6 text-lg text-gray-400">

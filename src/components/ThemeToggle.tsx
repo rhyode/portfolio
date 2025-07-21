@@ -16,6 +16,8 @@ export default function ThemeToggle() {
     return null;
   }
 
+  console.log("Current theme:", theme); // Log the theme to the console
+
   const isDarkMode = theme === "dark";
 
   return (
@@ -23,9 +25,9 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`relative w-16 h-8 rounded-full flex items-center cursor-pointer transition-all duration-500 ease-in-out ${
+      className={`relative w-16 h-8 rounded-full flex items-center cursor-pointer transition-all duration-500 ease-in-out shadow-inner shadow-gray-700 focus:outline-none ${
         isDarkMode ? "bg-teal-500" : "bg-orange-500"
-      } shadow-inner shadow-gray-700 focus:outline-none`}
+      } ${isHovered ? "scale-105" : ""}`}
       aria-label="Toggle Theme"
       style={{
         padding: "4px", // Matches the '4' on Tailwind's spacing scale
@@ -39,7 +41,7 @@ export default function ThemeToggle() {
       >
         {/* Sun Icon (Visible in Light Mode) */}
         <svg
-          className={`w-full h-full p-1 transition-opacity duration-500 ease-in-out ${
+          className={`w-full h-full p-1 transition-opacity duration-500 ease-in-out absolute top-0 left-0 ${
             isDarkMode ? "opacity-0" : "opacity-100"
           }`}
           fill="none"
