@@ -93,9 +93,9 @@ export default function Home() {
             <p className="text-center max-w-3xl mx-auto text-gray-300 leading-relaxed">
               I&apos;m an Electrical and Electronics Engineering student at VIT
               Vellore with a deep passion for software development and embedded
-              systems. With hands-on experience in C++, cloud computing, and
-              system-level programming, I enjoy building robust solutions that
-              solve real-world problems.
+              systems. With self directed experience in C++, cloud computing,
+              and system-level programming, I enjoy building robust solutions
+              that solve real-world problems.
             </p>
           </div>
         </section>
@@ -144,7 +144,7 @@ export default function Home() {
           </h2>
           <div className="glass-card rounded-2xl p-8 md:p-12 text-left">
             <div className="flex justify-between items-baseline mb-2">
-              <h3 className="flex center text-2xl font-bold glow-text">
+              <h3 className="flex centre text-2xl font-bold glow-text">
                 C++ Intern
               </h3>
               <p className="text-sm text-gray-400">May 2025 - present</p>
