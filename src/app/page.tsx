@@ -44,8 +44,8 @@ export default function Home() {
             <a href="#skills" className="hover:accent-text transition-all">
               Skills
             </a>
-            <a href="#projects" className="hover:accent-text transition-all">
-              Projects
+            <a href="#internships" className="hover:accent-text transition-all">
+              Internships
             </a>
             <a href="#contact" className="hover:accent-text transition-all">
               Contact
@@ -137,20 +137,37 @@ export default function Home() {
           style={{ top: "calc(60vh + 1100px)", height: "100px" }}
         ></div>
 
-        {/* Projects Section */}
-        <section id="projects" className="py-20 fade-in">
+        {/* Internships Section */}
+        <section id="internships" className="py-20 fade-in">
           <h2 className="text-4xl font-bold text-center mb-12 glow-text">
-            Featured Projects
+            Internships
           </h2>
-          <div className="glass-card rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl font-bold mb-2 glow-text">
-              Build Your Own Interpreter
-            </h3>
-            <p className="text-gray-300">
-              Currently designing an interpreter using parsing techniques and
-              lexical analysis to create a functional programming language
-              interpreter.
-            </p>
+          <div className="glass-card rounded-2xl p-8 md:p-12 text-left">
+            <div className="flex justify-between items-baseline mb-2">
+              <h3 className="flex center text-2xl font-bold glow-text">
+                C++ Intern
+              </h3>
+              <p className="text-sm text-gray-400">May 2025 - present</p>
+            </div>
+            <a
+              href="https://kineton.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg font-semibold hover:text-teal-400 transition-colors"
+            >
+              Kineton
+            </a>
+            <ul className="mt-4 list-disc list-inside space-y-2 text-gray-300">
+              <li>
+                Developed C++ software modules for Kineton’s AI and
+                semiconductor systems, focusing on the ’Baseplate’ as well as
+                ’Fabric’ interface engine.
+              </li>
+              <li>
+                Collaborated with 3 developers to design modules in C++ for
+                intelligent hardware.
+              </li>
+            </ul>
           </div>
         </section>
 
