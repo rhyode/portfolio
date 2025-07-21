@@ -153,7 +153,7 @@ export default function Home() {
               href="https://kineton.co/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg font-semibold hover:text-teal-400 transition-colors"
+              className="text-lg font-semibold hover:text-teal-400 transition-colors link-underline-effect"
             >
               Kineton
             </a>
@@ -164,7 +164,7 @@ export default function Home() {
                 ’Fabric’ interface engine.
               </li>
               <li>
-                Collaborated with 3 developers to design modules in C++ for
+                Collaborated with developers to design modules in C++ for
                 intelligent hardware.
               </li>
             </ul>
@@ -182,7 +182,7 @@ export default function Home() {
           </p>
           <a
             href="mailto:tanmaytrip59@gmail.com"
-            className="inline-block bg-teal-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-teal-600 transition-colors"
+            className="inline-block bg-teal-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-teal-600 transition-colors link-underline-effect"
           >
             Contact Me
           </a>
