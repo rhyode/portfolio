@@ -35,26 +35,36 @@ export default function Home() {
 
       {/* Sticky Header */}
       <header className="fixed top-0 w-full z-50 glass-card">
-        {/* <nav className="container mx-auto px-6 py-4 flex justify-between items-center"> */}
-        <div className="text-xl flex left font-bold">Tanmay Tripathi</div>
-        {/*<div className="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="#about" className="hover:accent-text transition-all">
-              //About
-               </a>
-            <a href="#skills" className="hover:accent-text transition-all">
-              Skills
-            </a>
-            <a href="#internships" className="hover:accent-text transition-all">
-              Internships
-            </a>
-            <a href="#contact" className="hover:accent-text transition-all">
-              Contact
-            </a>
-          </div>*/}
-        {/* ThemeToggle component is now uncommented */}
-        {/*<ThemeToggle />*/}
-        {/*</nav>*/}
-      </header>
+  <div className="flex justify-between items-center px-6 py-4">
+    {/* Left Side: Name/Logo */}
+    <div className="text-xl font-bold">
+      Tanmay Tripathi
+    </div>
+    </div>
+
+    {/* Right Side: Links and Toggle */}
+    <div className="flex items-center flex-direction:row align-items: flex-end; space-x-8">
+      {/* Your commented-out links would go here */}
+      {/*
+      <a href="#about" className="hover:accent-text transition-all">About</a>
+      <a href="#skills" className="hover:accent-text transition-all">Skills</a>
+      */}
+
+      {/* Resume Link */}
+      <a
+        href="/docs/Resume_Tanmay_Tripathi (1).pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-xl text-teal-400 hover:text-teal-300 transition-colors"
+      >
+        Resume
+      </a>
+
+      {/* Theme Toggle */}
+      <ThemeToggle />
+    </div>
+</header>
+
 
       {/* Main Content */}
       <main className="relative container mx-auto px-6 pt-48 pb-20">
@@ -65,7 +75,7 @@ export default function Home() {
         ></div>
 
         {/* Hero Section */}
-        <section id="hero" className="min-h-[30vh] fade-in flex items-center">
+        <section id="hero" className="min-h-[40vh] fade-in flex items-center">
           <div className="w-full text-left">
             <p className="text-2xl md:text-3xl glow-text">
               Self-driven Developer & AI Enthusiast
