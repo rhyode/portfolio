@@ -35,36 +35,33 @@ export default function Home() {
 
       {/* Sticky Header */}
       <header className="fixed top-0 w-full z-50 glass-card">
-  <div className="flex justify-between items-center px-6 py-4">
-    {/* Left Side: Name/Logo */}
-    <div className="text-xl font-bold">
-      Tanmay Tripathi
-    </div>
-    </div>
+        <div className="flex justify-between items-center px-6 py-4">
+          {/* Left Side: Name/Logo */}
+          <div className="text-xl font-bold">Tanmay Tripathi</div>
+        </div>
 
-    {/* Right Side: Links and Toggle */}
-    <div className="flex items-center flex-direction:row align-items: flex-end; space-x-8">
-      {/* Your commented-out links would go here */}
-      {/*
+        {/* Right Side: Links and Toggle */}
+        <div className="flex items-center flex-direction:row align-items: flex-end; space-x-8">
+          {/* Your commented-out links would go here */}
+          {/*
       <a href="#about" className="hover:accent-text transition-all">About</a>
       <a href="#skills" className="hover:accent-text transition-all">Skills</a>
       */}
 
-      {/* Resume Link */}
-      <a
-        href="/docs/Resume_Tanmay_Tripathi (1).pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-xl text-teal-400 hover:text-teal-300 transition-colors"
-      >
-        Resume
-      </a>
+          {/* Resume Link */}
+          <a
+            href="/docs/Tripathi_Tanmay_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl text-teal-400 hover:text-teal-300 transition-colors"
+          >
+            Resume
+          </a>
 
-      {/* Theme Toggle */}
-      <ThemeToggle />
-    </div>
-</header>
-
+          {/* Theme Toggle */}
+          <ThemeToggle />
+        </div>
+      </header>
 
       {/* Main Content */}
       <main className="relative container mx-auto px-6 pt-48 pb-20">
