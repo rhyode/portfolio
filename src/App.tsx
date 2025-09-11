@@ -39,10 +39,10 @@ export default function App() {
             <div>
               <p className={`text-lg mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Hey, I am</p>
               <h1 className={`text-6xl md:text-7xl font-bold mb-6 ${darkMode ? 'text-white' : 'bg-gradient-to-r from-cyan-600 to-cyan-400 bg-clip-text text-transparent'}`}>
-                Tanmay Tripathi
+                Tanmay Tripathi,
               </h1>
               <p className={`text-xl mb-8 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                A EEE BTech grad, catching feelings for Software Development and Generative AI (future crush - Agentic AI)
+                EEE BTech undergrad, catching feelings for Software Development and Generative AI (future crush - Agentic AI)
               </p>
               <div className="flex gap-4">
                 <a href="https://github.com" className={`inline-flex items-center gap-2 px-6 py-3 ${darkMode ? 'bg-white text-black hover:bg-gray-200' : 'bg-gradient-to-r from-cyan-600 to-cyan-500 text-white hover:from-cyan-700 hover:to-cyan-600'} rounded-lg transition-colors`}>
