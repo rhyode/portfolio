@@ -49,9 +49,9 @@ export default function App() {
                   <Github size={20} />
                   GitHub
                 </a>
-                <a href="#" className={`inline-flex items-center gap-2 px-6 py-3 border ${darkMode ? 'border-gray-700 hover:bg-gray-900' : 'border-cyan-600 hover:bg-cyan-50'} rounded-lg transition-colors`}>
+                <a href="https://tan-mused.vercel.app/#" className={`inline-flex items-center gap-2 px-6 py-3 border ${darkMode ? 'border-gray-700 hover:bg-gray-900' : 'border-cyan-600 hover:bg-cyan-50'} rounded-lg transition-colors`}>
                   <Globe size={20} />
-                  Website
+                  Things I write
                 </a>
               </div>
             </div>
