@@ -176,7 +176,7 @@ export default function App() {
       <footer className={`py-12 px-6 border-t ${darkMode ? 'border-gray-800 bg-black' : 'border-gray-200 bg-white'}`}>
         <div className="max-w-4xl mx-auto text-center">
           <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-            © 2024 Tanmay Tripathi. Built with passion and code.
+            © 2025 Tanmay Tripathi. Built with passion and code.
           </p>
         </div>
       </footer>
