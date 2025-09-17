@@ -1,5 +1,5 @@
 import  { useState, useEffect } from 'react';
-import  { Moon, Sun, Github, Globe, User, Code, Award, Mail, Book, Terminal, Settings } from 'lucide-react'; 
+import  { Moon, Sun, Github, Globe, User, Code, Award, Mail, Book, Terminal, Settings, BookUser} from 'lucide-react'; 
 
 export default function App() {
    const [darkMode, setDarkMode] = useState(true); 
@@ -52,6 +52,10 @@ export default function App() {
                 <a href="https://tan-mused.vercel.app/#" className={`inline-flex items-center gap-2 px-6 py-3 border ${darkMode ? 'border-gray-700 hover:bg-gray-900' : 'border-cyan-600 hover:bg-cyan-50'} rounded-lg transition-colors`}>
                   <Globe size={20} />
                   Things I write
+                </a>
+                <a href="https://drive.google.com/file/d/17QsZEd8N-5VCP8ci7QAYslM-OugO4sV8/view?usp=sharing" className={`inline-flex items-center gap-2 px-6 py-3 border ${darkMode ? 'border-gray-700 hover:bg-gray-900' : 'border-cyan-600 hover:bg-cyan-50'} rounded-lg transition-colors`}>
+                  <BookUser size={20} />
+                  Resume
                 </a>
               </div>
             </div>
