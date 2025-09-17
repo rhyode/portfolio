@@ -45,15 +45,15 @@ export default function App() {
                 EEE BTech undergrad, catching feelings for Software Development and Generative AI (future crush - Agentic AI)
               </p>
               <div className="flex gap-4">
-                <a href="https://github.com" className={`inline-flex items-center gap-2 px-6 py-3 ${darkMode ? 'bg-white text-black hover:bg-gray-200' : 'bg-gradient-to-r from-cyan-600 to-cyan-500 text-white hover:from-cyan-700 hover:to-cyan-600'} rounded-lg transition-colors`}>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 px-6 py-3 ${darkMode ? 'bg-white text-black hover:bg-gray-200' : 'bg-gradient-to-r from-cyan-600 to-cyan-500 text-white hover:from-cyan-700 hover:to-cyan-600'} rounded-lg transition-colors`}>
                   <Github size={20} />
                   GitHub
                 </a>
-                <a href="https://tan-mused.vercel.app/#" className={`inline-flex items-center gap-2 px-6 py-3 border ${darkMode ? 'border-gray-700 hover:bg-gray-900' : 'border-cyan-600 hover:bg-cyan-50'} rounded-lg transition-colors`}>
+                <a href="https://tan-mused.vercel.app/#" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 px-6 py-3 border ${darkMode ? 'border-gray-700 hover:bg-gray-900' : 'border-cyan-600 hover:bg-cyan-50'} rounded-lg transition-colors`}>
                   <Globe size={20} />
                   Things I write
                 </a>
-                <a href="https://drive.google.com/file/d/17QsZEd8N-5VCP8ci7QAYslM-OugO4sV8/view?usp=sharing" className={`inline-flex items-center gap-2 px-6 py-3 border ${darkMode ? 'border-gray-700 hover:bg-gray-900' : 'border-cyan-600 hover:bg-cyan-50'} rounded-lg transition-colors`}>
+                <a href="https://drive.google.com/file/d/17QsZEd8N-5VCP8ci7QAYslM-OugO4sV8/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 px-6 py-3 border ${darkMode ? 'border-gray-700 hover:bg-gray-900' : 'border-cyan-600 hover:bg-cyan-50'} rounded-lg transition-colors`}>
                   <BookUser size={20} />
                   Resume
                 </a>
