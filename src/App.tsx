@@ -62,7 +62,7 @@ export default function App() {
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1698945298361-365595d400eb?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2UlMjBkYXJrJTIwbWluaW1hbGlzdCUyMGNvZGluZyUyMHNldHVwfGVufDB8fHx8MTc1NzU5OTg1N3ww&ixlib=rb-4.1.0&fit=fillmax&h=600&w=1200" 
-                alt="Professional developer workspace" 
+                alt="Tanmay Tripathi portfolio website image" 
                 className="rounded-2xl shadow-2xl"
               />
             </div>
